@@ -1,0 +1,54 @@
+
+#4. El juego infantil “piedra, papel o tijera” consiste en que dos jugadores eligen
+#una de estas tres opciones, y el resultado es que el papel gana a la piedra
+#(envolviéndola), la piedra gana a la tijera (rompiéndola), y la tijera gana al
+#papel (cortándolo).
+#Escribe un código en Python que decida el ganador a partir del valor de dos
+#variables jugador (input), ordenador (aleatorio) que pueden tomar los
+#valores “piedra”, “papel”, o “tijera”, y que imprima por pantalla un mensaje
+#(print) diciendo si el jugador ha ganado o perdido, y la elección efectuada
+#por el ordenador.
+
+import random
+jugador = input("¿piedra, papel o tijera? : ").lower()
+lista = ["piedra", "papel", "tijera"]
+ordenador = random.choice(lista)
+
+print(f"Jugador saca {jugador}")
+
+if jugador not in lista:
+    print("Porfvor, solo elija las opciones mencionadas!! ")
+else:
+    
+    if jugador == "piedra":
+        if ordenador == "papel":
+            print(f"Ordenador ha sacado {ordenador}")
+            print("Jugador ha perdido, ordenador gana.")
+        elif ordenador == "piedra":
+            print(f"Ordenador ha sacado {ordenador}")
+            print("Empate.")
+        else:
+            print(f"Ordenador ha sacado {ordenador}")
+            print("Jugador ha ganado, ordenador pierde.")
+    
+    elif jugador == "papel":
+        if ordenador == "tijera":
+            print(f"Ordenador ha sacado {ordenador}")
+            print("Jugador ha perdido, ordenador gana.")
+        elif ordenador == "papel":
+            print(f"Ordenador ha sacado {ordenador}")
+            print("Empate.")
+        else:
+            print(f"Ordenador ha sacado {ordenador}")
+            print("Jugador ha ganado, ordenador pierde.")
+    
+    else:
+        if ordenador == "piedra":
+            print(f"Ordenador ha sacado {ordenador}")
+            print("Jugador ha perdido, ordenador gana.")
+        elif ordenador == "tijera":
+            print(f"Ordenador ha sacado {ordenador}")
+            print("Empate.")
+        else:
+            print(f"Ordenador ha sacado {ordenador}")
+            print("Jugador ha ganado, ordenador pierde.")
